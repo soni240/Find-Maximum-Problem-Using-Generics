@@ -1,37 +1,36 @@
 ﻿// See https://aka.ms/new-console-template for more information
-//Console.WriteLine("Hello, World!");
-using Array_Sample_Code;
-using System;
-
-internal class ArrayInput
+namespace FindMaximumNoProject
 {
-    public static void toPrint<X>(X[] inputArray)
+    class MaximumNumberCheck
     {
-        foreach (var element in inputArray)
+        public static string MaximumStringNumber(string firstString, string secondString, string thirdString)
         {
-            Console.WriteLine(element);
-        }
-        //for (int i = 0; i < inputArray.Length; i = i + 2)
-        //{
-        //    Console.WriteLine(inputArray[i]);
-        //}
-        Console.WriteLine("----------------------------------");
-    }
-    class program
-    {
-        static void Main(string[] args)
-        {
-            int[] intArray = { 1, 2, 3, 4, 5 };
-            double[] doubleArray = { 1.1, 2.2, 3.3, 4.4 };
-            char[] charArray = { 'H', 'E', 'L', 'L', 'O' };
-            //Program.toPrint(intArray);
-            //Program.toPrint(doubleArray);
-            //Program.toPrint(charArray);
+            if (firstString.CompareTo(secondString) > 0 && firstString.CompareTo(thirdString) > 0 ||
+                firstString.CompareTo(secondString) >= 0 && firstString.CompareTo(thirdString) > 0 ||
+                firstString.CompareTo(secondString) > 0 && firstString.CompareTo(thirdString) >= 0)
+            {
+                return firstString;
+            }
 
-            ArrayInput.toPrint<int>(intArray);
-            ArrayInput.toPrint<double>(doubleArray);
-            ArrayInput.toPrint<char>(charArray);
-            Console.ReadKey();
+            if (secondString.CompareTo(firstString) > 0 && secondString.CompareTo(thirdString) > 0 ||
+                secondString.CompareTo(firstString) >= 0 && secondString.CompareTo(thirdString) > 0 ||
+                secondString.CompareTo(firstString) > 0 && secondString.CompareTo(thirdString) >= 0)
+            {
+                return secondString;
+            }
+
+            if (thirdString.CompareTo(firstString) > 0 && thirdString.CompareTo(secondString) > 0 ||
+                thirdString.CompareTo(firstString) >= 0 && thirdString.CompareTo(secondString) > 0 ||
+                thirdString.CompareTo(firstString) > 0 && thirdString.CompareTo(secondString) >= 0)
+            {
+                return thirdString;
+            }
+            throw new Exception("firstNumber,secondNumber and thirdNumber are same");
         }
     }
 }
+           public override string? ToString()
+           {         
+              return base.ToString();
+           }
+
