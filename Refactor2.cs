@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UC3_Maximum_String
 {
-    internal class Refactor1
+    internal class Refactor2
     {
         private int[] intArray;
         private double[] doubleArray;
@@ -40,5 +40,5 @@ namespace UC3_Maximum_String
     }
 }
 
-    
-
+    }
+}
