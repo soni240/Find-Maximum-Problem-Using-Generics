@@ -1,55 +1,32 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using FindMaximumNoProject;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace UC4_Max_Three_Parameters
+public class program
 {
-    internal class ArrayInput
+    public static void main(String[] args)
     {
-        public static void toPrint<X>(X[] inputArray)
-        {
-            foreach (var element in inputArray)
-            {
-                Console.WriteLine(element);
-            }
-            //for (int i = 0; i < inputArray.Length; i = i + 2)
-            //{
-            //    Console.WriteLine(inputArray[i]);
-            //}
-            Console.WriteLine("----------------------------------");
-        }
+        //Console.WriteLine("Find max Number");
+        //int output = MaximumNumberCheck.MaximumIntegerNumber(11, 22, 33);
+        //Console.WriteLine(output);
+        //double doubleoutput = MaximumNumberCheck.MaximumFloatNumber(111.2, 22.45, 78.56);
+        //Console.WriteLine(doubleoutput);
+        //string strigoutput = MaximumNumberCheck.MaximumStringNumber("22", "33", "44");
+        //Console.WriteLine(strigoutput);// A-65, B-66 C-67..Z=, a=97,b=98,99..z, '0'-48, 1-49,2-50,3-51,4-52...
+        int[] intArray = { 112, 432, 344, 555, 678 };
+        GenericMaximum<int> generic = new GenericMaximum<int>(intArray);
+        generic.PrintMaxValue();
+        double[] doubleArray = { 11.2, 34.4, 4.32, 55.5, 6.78 };
+        GenericMaximum<double> genericDouble = new GenericMaximum<double>(doubleArray);
+        genericDouble.PrintMaxValue();
+        string[] stringArray = { "111", "222", "333", "55", "999" };
 
-        public static void toPrint(int[] inputArray)
-        {
-            foreach (double element in inputArray) // 1, 2, 3, 4, 5
-            {
-                Console.WriteLine(element);
-            }
-            Console.WriteLine("----------------------------------");
-        }
+        GenericMaximum<string> genericString = new GenericMaximum<string>(stringArray);
+        genericString.PrintMaxValue();
+        //GenericMaximum<Employee> genericString1 = new GenericMaximum<string>(stringArray);
+        Console.ReadKey();
 
-        public static void toPrint(double[] inputArray)
-        {
-
-            foreach (double element in inputArray)//1.1, 2.2, 3.3, 4.4
-            {
-                Console.WriteLine(element);
-            }
-            Console.WriteLine("----------------------------------");
-        }
-
-        public static void toPrint(char[] inputArray)
-        {
-            foreach (char element in inputArray) //'H', 'E', 'L', 'L', 'O'
-            {
-                Console.WriteLine(element);
-            }
-            Console.WriteLine("-------------------------------------");
-        }
 
 
     }
 }
+
