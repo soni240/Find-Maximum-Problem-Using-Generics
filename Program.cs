@@ -3,7 +3,7 @@ namespace FindMaximumNoProject
 {
     class MaximumNumberCheck
     {
-        public static int MaximumIntegerNumber(int firstValue, int secondValue, int thirdValue)
+        public static double MaximumFloatNumber(double firstValue, double secondValue, double thirdValue)
         {
             if (firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) > 0)
             {
@@ -21,3 +21,9 @@ namespace FindMaximumNoProject
         }
     }
 }
+
+
+
+
+
+
